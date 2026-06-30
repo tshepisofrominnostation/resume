@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tshepiso Freddy Thosago — Resume</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --ink:#0f172a;
+  --ink2:#334155;
+  --ink3:#64748b;
+  --teal:#0d9488;
+  --teal-l:#f0fdfa;
+  --border:#e2e8f0;
+  --bg:#fff;
+  --accent:#0ea5e9;
+  --mono:'JetBrains Mono',monospace;
+}
+html{font-size:10pt;}
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  background:#f1f5f9;
+  color:var(--ink);
+  line-height:1.5;
+  -webkit-print-color-adjust:exact;
+  print-color-adjust:exact;
+}
+
+/* PAGE WRAPPER */
+.page{
+  width:210mm;
+  min-height:297mm;
+  background:var(--bg);
+  margin:24px auto;
+  padding:14mm 16mm 14mm 16mm;
+  box-shadow:0 4px 32px rgba(0,0,0,.12);
+}
+
+/* ── HEADER ──────────────────────────────────────────── */
+header{margin-bottom:14px;}
+.h-top{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:10px;}
+.h-name{font-size:22pt;font-weight:800;letter-spacing:-0.5px;color:var(--ink);line-height:1.1;}
+.h-name span{color:var(--teal);}
+.h-badge{
+  margin-top:4px;
+  display:inline-block;padding:3px 10px;border-radius:4px;
+  background:var(--teal-l);border:1px solid #99f6e4;
+  font-size:7.5pt;font-weight:600;color:var(--teal);white-space:nowrap;
+}
+.h-contact{
+  display:flex;flex-wrap:wrap;gap:5px 16px;
+  font-size:8pt;color:var(--ink3);margin-top:6px;
+}
+.h-contact a{color:var(--teal);text-decoration:none;}
+.h-contact span{display:flex;align-items:center;gap:4px;}
+.h-contact .dot{width:3px;height:3px;border-radius:50%;background:var(--border);flex-shrink:0;}
+
+/* ── SECTION ─────────────────────────────────────────── */
+.section{margin-bottom:13px;}
+.sec-title{
+  font-size:8pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--teal);border-bottom:1.5px solid var(--teal);
+  padding-bottom:3px;margin-bottom:9px;
+  font-family:var(--mono);
+}
+
+/* ── SUMMARY ─────────────────────────────────────────── */
+.summary p{font-size:9pt;color:var(--ink2);line-height:1.65;}
+
+/* ── SKILLS GRID ─────────────────────────────────────── */
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:5px 20px;}
+.skill-row{display:flex;align-items:baseline;gap:6px;font-size:8.5pt;}
+.skill-cat{font-weight:700;color:var(--ink);white-space:nowrap;min-width:120px;}
+.skill-val{color:var(--ink2);}
+
+/* ── PROJECTS ────────────────────────────────────────── */
+.project{margin-bottom:11px;padding-bottom:11px;border-bottom:1px solid var(--border);}
+.project:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
+.proj-header{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:3px;}
+.proj-name{font-size:10.5pt;font-weight:700;color:var(--ink);}
+.proj-links{display:flex;gap:8px;flex-shrink:0;margin-top:1px;}
+.proj-link{
+  font-size:7.5pt;font-weight:600;color:var(--teal);
+  font-family:var(--mono);text-decoration:none;
+  border:1px solid #99f6e4;border-radius:3px;padding:1px 6px;
+  background:var(--teal-l);
+}
+.proj-stack{font-size:8pt;color:var(--ink3);font-family:var(--mono);margin-bottom:5px;}
+.proj-stack b{color:var(--teal);font-weight:600;}
+.proj-bullets{list-style:none;padding:0;}
+.proj-bullets li{
+  font-size:8.5pt;color:var(--ink2);padding:1.5px 0 1.5px 12px;
+  position:relative;line-height:1.55;
+}
+.proj-bullets li::before{content:'▸';position:absolute;left:0;color:var(--teal);font-size:8pt;}
+.proj-bullets li b{color:var(--ink);font-weight:600;}
+.proj-bullets li code{font-family:var(--mono);font-size:7.5pt;background:#f8fafc;border:1px solid var(--border);border-radius:2px;padding:0 3px;}
+
+/* ── EDUCATION ───────────────────────────────────────── */
+.edu-row{display:flex;justify-content:space-between;align-items:baseline;gap:8px;}
+.edu-name{font-size:10pt;font-weight:700;color:var(--ink);}
+.edu-deg{font-size:9pt;color:var(--ink2);margin-top:2px;}
+.edu-detail{font-size:8.5pt;color:var(--ink3);margin-top:2px;}
+
+/* ── DECLARATION ─────────────────────────────────────── */
+.decl-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px;}
+.decl-row{font-size:8.5pt;color:var(--ink2);}
+.decl-row b{color:var(--ink);}
+
+/* ── PRINT ───────────────────────────────────────────── */
+@media print{
+  body{background:white;}
+  .page{margin:0;box-shadow:none;padding:12mm 14mm;}
+}
+@page{size:A4;margin:0;}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ── HEADER ── -->
+  <header>
+    <div class="h-top">
+      <div>
+        <div class="h-name">Tshepiso Freddy <span>Thosago</span></div>
+        <div class="h-badge">BCom Information Systems · NQF Level 7 · University of Johannesburg</div>
+      </div>
+    </div>
+    <div class="h-contact">
+      <span>Johannesburg, Gauteng</span>
+      <span class="dot"></span>
+      <span>+27 680 409 678</span>
+      <span class="dot"></span>
+      <span><a href="mailto:tshepisothosago@gmail.com">tshepisothosago@gmail.com</a></span>
+      <span class="dot"></span>
+      <span><a href="https://github.com/tshepisofrominnostation" target="_blank">github.com/tshepisofrominnostation</a></span>
+      <span class="dot"></span>
+      <span><a href="https://tshepiso-thosago.netlify.app" target="_blank">tshepiso-thosago.netlify.app</a></span>
+    </div>
+  </header>
+
+  <!-- ── PROFESSIONAL SUMMARY ── -->
+  <div class="section">
+    <div class="sec-title">Professional Summary</div>
+    <div class="summary">
+      <p>Full-stack developer and BCom Information Systems graduate specialising in backend engineering, database architecture, and cloud deployment. Independently built and deployed <b>4 production web applications</b> across fintech, edtech, and enterprise resource planning — each solving a specific South African business problem. Proven ability to design multi-tenant PostgreSQL schemas, implement POPIA-compliant data isolation, and ship full-stack systems from requirement gathering to live deployment on Railway and Netlify. Seeking a junior-to-mid developer role where I can contribute real code from day one.</p>
+    </div>
+  </div>
+
+  <!-- ── CORE TECHNICAL SKILLS ── -->
+  <div class="section">
+    <div class="sec-title">Core Technical Skills</div>
+    <div class="skills-grid">
+      <div class="skill-row"><span class="skill-cat">Backend</span><span class="skill-val">Python (Flask 3.0), Node.js, TypeScript, Express, gunicorn</span></div>
+      <div class="skill-row"><span class="skill-cat">Frontend</span><span class="skill-val">React, Next.js 14, HTML5, CSS3, JavaScript (ES6+), Tailwind</span></div>
+      <div class="skill-row"><span class="skill-cat">Databases</span><span class="skill-val">PostgreSQL, Prisma ORM, Supabase + RLS, SQLite, MySQL</span></div>
+      <div class="skill-row"><span class="skill-cat">APIs & Integration</span><span class="skill-val">REST API design, JWT auth, Meta WhatsApp API, Resend API</span></div>
+      <div class="skill-row"><span class="skill-cat">Cloud & DevOps</span><span class="skill-val">Railway, Netlify, Netlify Functions, Git, GitHub, Nixpacks</span></div>
+      <div class="skill-row"><span class="skill-cat">Architecture</span><span class="skill-val">Multi-tenant design, POPIA compliance, atomic transactions, RBAC</span></div>
+      <div class="skill-row"><span class="skill-cat">Analytics</span><span class="skill-val">Power BI, Advanced Excel, SAP Ariba, SAP Comet</span></div>
+      <div class="skill-row"><span class="skill-cat">Methodologies</span><span class="skill-val">Business Analysis, Schema Design, PRD / BRD documentation</span></div>
+    </div>
+  </div>
+
+  <!-- ── FEATURED PROJECTS ── -->
+  <div class="section">
+    <div class="sec-title">Featured Software Engineering Projects</div>
+
+    <!-- PROJECT 1 -->
+    <div class="project">
+      <div class="proj-header">
+        <div class="proj-name">Rem0Beg Pay — Earned Wage Access Platform</div>
+        <div class="proj-links">
+          <a href="https://rem0beg-pay.netlify.app" class="proj-link" target="_blank">↗ Live Demo</a>
+          <a href="https://github.com/tshepisofrominnostation/rem0beg-pay" class="proj-link" target="_blank">↗ GitHub</a>
+        </div>
+      </div>
+      <div class="proj-stack"><b>Stack:</b> TypeScript · Node.js · PostgreSQL · decimal.js · Netlify · Sage / PaySpace / Pastel Integration</div>
+      <ul class="proj-bullets">
+        <li>Designed and deployed a B2B2C fintech platform enabling SA employees to access up to <b>25% of earned wages before payday</b> via a flat R15 fee — deliberately structured outside National Credit Act classification.</li>
+        <li>Engineered <b>atomic PostgreSQL transactions</b> with row-level locking to prevent double-spending when concurrent withdrawal requests arrive for the same employee.</li>
+        <li>Enforced <b>POPIA-compliant multi-tenant data isolation</b> — every table scoped by <code>company_id</code> extracted from JWT; zero cross-tenant data leakage by design.</li>
+        <li>Replaced JavaScript native floats with <code>decimal.js</code> for all financial arithmetic — preventing IEEE 754 rounding errors across thousands of transactions.</li>
+        <li>Built payroll integration layer supporting <b>Sage 300 People (OAuth2), PaySpace (API key), and Pastel (SFTP/CSV)</b> with quarantine logging for corrupted batch records.</li>
+        <li>Implemented month-end reconciliation worker: aggregates all advances per employer, deducts in bulk at payroll run, marks period as <code>RECONCILED</code>.</li>
+      </ul>
+    </div>
+
+    <!-- PROJECT 2 -->
+    <div class="project">
+      <div class="proj-header">
+        <div class="proj-name">Dinoto Technical Secondary School — ERP System</div>
+        <div class="proj-links">
+          <a href="https://edutrace-erp.netlify.app" class="proj-link" target="_blank">↗ Live Demo</a>
+          <a href="https://github.com/tshepisofrominnostation/dinoto-school-erp" class="proj-link" target="_blank">↗ GitHub</a>
+        </div>
+      </div>
+      <div class="proj-stack"><b>Stack:</b> Next.js 14 · TypeScript · Node.js · Express · Prisma ORM · PostgreSQL · JWT RBAC</div>
+      <ul class="proj-bullets">
+        <li>Architected a full-stack school ERP replacing paper registers — digitising textbook and asset custody across <b>9 modules</b> (Scanner, Audit, Invoices, Reports, Asset Register).</li>
+        <li>Designed a <b>14-table PostgreSQL schema</b> with separate <code>Book</code> and <code>BookCopy</code> entities (one title → many barcoded physical copies) and an immutable <code>Transaction</code> audit trail.</li>
+        <li>Implemented <b>role-based access control</b> across 6 staff levels (Super Admin → Teacher → Student) via JWT middleware; roles verified at route handler, not just UI.</li>
+        <li>Built barcode scan-to-issue/return workflow using <b>USB HID scanner input capture</b> — scans processed in under 200ms via Prisma <code>$transaction()</code> atomic operations.</li>
+        <li>Projected to save each school <b>R247,000+/year</b> in lost textbooks; national scale (23,000+ schools) represents R6.1B annual opportunity.</li>
+      </ul>
+    </div>
+
+    <!-- PROJECT 3 -->
+    <div class="project">
+      <div class="proj-header">
+        <div class="proj-name">SIPMS — Smart Inventory & Procurement Management System</div>
+        <div class="proj-links">
+          <a href="https://sipms-production.up.railway.app" class="proj-link" target="_blank">↗ Live on Railway</a>
+          <a href="https://github.com/tshepisofrominnostation/sipms" class="proj-link" target="_blank">↗ GitHub</a>
+        </div>
+      </div>
+      <div class="proj-stack"><b>Stack:</b> Python 3.11 · Flask 3.0 · PostgreSQL · SQLite · gunicorn · Railway · Jinja2</div>
+      <ul class="proj-bullets">
+        <li>Built and deployed a full ERP-style procurement system with <b>17 routes across 5 modules</b>: Products, Suppliers, Purchase Orders, Transactions, Reports — live on Railway with PostgreSQL backend.</li>
+        <li>Implemented <b>dual-database architecture</b>: single codebase runs SQLite (local, zero-config) and PostgreSQL (production) via environment-based <code>get_db()</code> adapter pattern.</li>
+        <li>Designed an <b>append-only transactions table</b> — INSERT only, never UPDATE/DELETE — providing a tamper-proof audit trail; current stock derived as SUM of all movements.</li>
+        <li>Configured <b>Nixpacks build pipeline</b> and <code>railway.json</code> for automated Railway deployment; <code>DATABASE_URL</code> env var switches DB at runtime with no code changes.</li>
+        <li>Gathered business requirements, authored BRDs and technical specifications; developed Power BI dashboards for procurement and supplier performance analytics.</li>
+      </ul>
+    </div>
+
+    <!-- PROJECT 4 -->
+    <div class="project">
+      <div class="proj-header">
+        <div class="proj-name">Book-Smart — B2B SaaS School Asset Tracking Platform</div>
+        <div class="proj-links">
+          <a href="https://booksmart-platform.netlify.app" class="proj-link" target="_blank">↗ Live Demo</a>
+          <a href="https://github.com/tshepisofrominnostation/book-smart" class="proj-link" target="_blank">↗ GitHub</a>
+        </div>
+      </div>
+      <div class="proj-stack"><b>Stack:</b> JavaScript · Netlify Serverless Functions (Node.js) · Supabase (PostgreSQL) · Resend API · Meta WhatsApp API</div>
+      <ul class="proj-bullets">
+        <li>Built a multi-tenant serverless platform for township primary schools — <b>zero server maintenance, R0/month hosting</b> on Netlify + Supabase free tiers.</li>
+        <li>Designed a <b>9-table PostgreSQL schema</b> with Supabase Row-Level Security — database-layer POPIA compliance; cross-school data access structurally impossible.</li>
+        <li>Engineered barcode scan-to-custody workflow: USB HID scanners captured via browser <code>keydown</code> events, processed through Netlify serverless functions in under 200ms.</li>
+        <li>Integrated WhatsApp Business API for automated parent billing notifications and Resend for transactional email confirmations.</li>
+        <li>Authored full PRD, REST API specifications, and architecture documentation for the platform.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- ── EDUCATION ── -->
+  <div class="section">
+    <div class="sec-title">Education</div>
+    <div class="edu-row">
+      <div>
+        <div class="edu-name">University of Johannesburg (UJ)</div>
+        <div class="edu-deg">Bachelor of Commerce (BCom) in Information Systems · NQF Level 7</div>
+        <div class="edu-detail">Majors: Information Systems &amp; Project Management &nbsp;·&nbsp; Minor: Entrepreneurship &nbsp;·&nbsp; Aggregate: 65%+</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── PERSONAL DECLARATION ── -->
+  <div class="section">
+    <div class="sec-title">Personal Declaration</div>
+    <div class="decl-grid">
+      <div class="decl-row"><b>Nationality:</b> South African Citizen by birth</div>
+      <div class="decl-row"><b>Portfolio:</b> tshepiso-thosago.netlify.app</div>
+      <div class="decl-row"><b>Experience:</b> Less than 2 years formal corporate post-studies</div>
+      <div class="decl-row"><b>Availability:</b> Immediate · Open to full-time &amp; contract</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
